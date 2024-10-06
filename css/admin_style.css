@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+:root{
+      --color-primary: #2f57ef;
+      --primary-opacity: #2f57ef11;
+      --color-secondary: #b966e7;
+      --color-voilet: #800080;
+      --bg-color: #f9f9ff;
+      --color-pink: #db709322;
+      --pink-opacity: #db70932222;
+      --box-shadow: 0 0 10px rgb(0 0 0/15%);
+      --main-color: #8e44ad;
+      --red: #ed176f;
+      --coral: #f7817f;
+      --gradient: linear-gradient(90deg, var(--color-secondary), var(--color-pink));
+      --gradient2: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-secondary), var(--color-primary));
+      --black: #2c3e50;
+      --white: #fff;
+      --light-color: #ccc;
+      --light-bg: #eee;
+      --border: .1rem solid rgba(0,0,0,.2);
+}
+*{
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      text-decoration: none;
+      border: none;
+}
+*::selection{
+      background: var(--main-color);
+      color: #fff;
+}
+*::webkit-scroolbar{
+      height: .5rem;
+      white-space: .7rem;
+      border-radius: 20px;
+}
+*::webkit-scroolbar-track{
+      background-color: transparent;
+}
+*webkit-scroolbar-thumb{
+      background-color: var(--color-primary);
+}
+html{
+      font-size: 62.5%;
+      overflow-x: hidden;
+}
+body{
+      background-color: var(--bg-color);
+}
+.btn{
+      background-image: var(--gradient2);
+      border-radius: 20px;
+      text-align: center;
+      padding: .5rem;
+      color: var(--white);
+      text-transform: capitalize;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: .8rem 2rem;
+}
+.btn:hover{
+      background-image: var(--gradient);
+}
+section{
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+}
+.flex-btn{
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+}
+.message{
+      position: sticky;
+      top: 0%;
+      background-color: var(--light-bg);
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+}
+.message.form{
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: var(--white);
+      top: 2rem;
+      border-radius: .5rem;
+}
+.message span{
+      font-size: 2rem;
+      color: var(--black);
+}
+.message i{
+      font-size: 2.5rem;
+      color: var(--red);
+      cursor: pointer;
+      transition: .2s linear;
+}
+.message i:hover{
+      transform: rotate(90deg);
+}
+.empty{
+      background-color: var(--primary-opacity);
+      border-radius: .5rem;
+      padding: 1.5rem;
+      text-align: center;
+      width: 100%;
+      font-size: 2rem;
+      color: var(--color-primary);
+}
+.heading{
+      padding-bottom: 1.8rem;
+      border-bottom: var(--border);
+      font-size: 2.5rem;
+      color: var(--black);
+      text-transform: capitalize;
+      margin-block: 2rem;
+      text-align: center;
+}
+/*------------------header-section----------------*/
