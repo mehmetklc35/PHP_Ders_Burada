@@ -125,3 +125,275 @@ section{
       text-align: center;
 }
 /*------------------header-section----------------*/
+.header{
+      background-color: var(--white);
+      position: sticky;
+      top: 0%;
+      left: 0%;
+      right: 0%;
+      z-index: 1000;
+      box-shadow: 0px 5px 10px 0px #aaa;
+}
+.header .flex{
+      padding: 1.5rem 2rem;
+      position: revert;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+.header .flex .search-form{
+      width: 50rem;
+      border-radius: .5rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 1.5rem 2rem;
+      background-color: var(--primary-opacity);
+}
+.header .flex .search-form input{
+      width: 100%;
+      background: none;
+      font-size: 2rem;
+      color: var(--color-primary);
+}
+.header .flex .search-form button{
+      font-size: 2rem;
+      color: var(--color-primary);
+      cursor: pointer;
+      background: none;
+}
+.header .flex .search-form button:hover{
+      color: var(--color-secondary);
+}
+.header .flex .icons div{
+      font-size: 2.5rem;
+      color: var(--white);
+      border-radius: .5rem;
+      height: 4.5rem;
+      width: 4.5rem;
+      line-height: 4.4rem;
+      cursor: pointer;
+      background-image: var(--gradient2);
+      text-align: center;
+      margin-left: .5rem;
+}
+.header .flex .icons div:hover{
+      background-image: var(--gradient);
+}
+.header .flex .profile{
+      padding: 2rem;
+      text-align: center;
+      width: 40rem;
+      transform: scale(0);
+      transform-origin: top right;
+      box-shadow: var(--box-shadow);
+}
+.header .flex .profile.active{
+      transform: scale(1.0);
+      transition: .2s linear;
+}
+.header .flex .profile img{
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      object-fit: cover;
+      padding: .5rem;
+      background-image: var(--gradient);
+      margin-bottom: .5rem;
+}
+.header .flex .profile h3{
+      font-size: 2rem;
+      color: var(--black);
+      margin-bottom: 2rem;
+      text-transform: capitalize;
+}
+.header .flex .profile span{
+      color: var(--light-color);
+      font-size: 1.6rem;
+      text-transform: capitalize;
+}
+.header .flex .profile .flex-btn{
+      margin-top: 1.5rem;
+}
+/*------------------side bar---------------*/
+.side-bar{
+      position: fixed;
+      top: 0%;
+      left: -30rem;
+      height: 100vh;
+      width: 30rem;
+      background-color: #fff;
+      border-right: var(--border);
+      z-index: 1200;
+      transition: transform 0.5s ease-in-out;
+      box-shadow: 0px 5px 10px 0px #aaa;
+      transition: .5s linear;
+}
+.side-bar.active{
+      left: 0;
+}
+.side-bar .profile{
+      padding: 3rem 2rem;
+}
+.side-bar .profile img{
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: .5rem;
+      padding: .5rem;
+      background-color: var(--color-secondary);
+}
+.side-bar .profile h3{
+      font-size: 2rem;
+      color: var(--black);
+      text-transform: capitalize;
+      margin-bottom: 2rem;
+}
+.side-bar .profile p{
+      color: var(--light-color);
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+}
+.side-bar .profile .flex-btn{
+      margin-top: .5rem;
+}
+.side-bar .navbar a{
+      display: block;
+      padding: 2rem;
+      margin: .5rem 0;
+      font-size: 1.5rem;
+}
+.side-bar .navbar a i{
+      color: var(--main-color);
+      margin-right: 1.5rem;
+      transition: .2s linear;
+}
+.side-bar .navbar a span{
+      color: var(--light-color);
+      text-transform: capitalize;
+}
+.side-bar .navbar a:hover{
+      background-image: var(--gradient2);
+}
+.side-bar .navbar a:hover span{
+      color: var(--white);
+}
+.side-bar .navbar a:hover i{
+      color: var(--white);
+      margin-right: 2.5rem;
+}
+/*------------form container (register vs)---------*/
+.form-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+}
+.form-img  {
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+}
+.form-container form{
+      box-shadow: var(--box-shadow);
+      border-radius: .5rem;
+      padding: 2rem;
+}
+.form-container .login{
+      width: 50rem;
+}
+.form-container .register{
+      width: 80rem;
+}
+.form-container form h3{
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-primary);
+      text-transform: capitalize;
+      font-weight: bold;
+}
+.form-container form p{
+      padding-top: 1rem;
+      font-size: 1.7rem;
+      color: var(--light-color);
+}
+.form-container form p span{
+      color: var(--red);
+}
+.form-container .link{
+      text-align: center;
+      padding-bottom: 1rem;
+      font-size: 2rem;
+}
+.form-container .link a{
+      color: var(--main-color);
+}
+.form-container .link a:hover{
+      color: var(--black);
+      text-decoration: underline;
+}
+.form-container form .box{
+      width: 100%;
+      border-radius: .5rem;
+      margin: 1rem 0;
+      font-size: 1.8rem;
+      color: var(--black);
+      padding: 1.4rem;
+      background-color: #fff;
+      box-shadow: var(--box-shadow);
+}
+.form-container .flex{
+      display: flex;
+      gap: 2rem;
+}
+.form-container .flex .col{
+      flex: 1 1 25rem;
+}
+.form-container .btn{
+      width: 100%;
+      font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------media screen---------*/
+@media (max-width:768px) {
+      #search-btn{
+            display: inline-block;
+      }
+      .header .flex .search-form{
+            position: absolute;
+            top: 99%;
+            width: 99%;
+            border-top: var(--border);
+            border-bottom: var(--border);
+            background-color: var(--white);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: .2s linear;
+      }
+      .header .flex .search-form.active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);     
+      }
+}

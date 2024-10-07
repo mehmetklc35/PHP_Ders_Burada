@@ -11,7 +11,7 @@
       }
 
 ?>
-<header>
+<header class="header">
       <section class="flex">
             <a href="dashboard.php"> <img src="../image/logo.png" width="130px"> </a>
             <form action="search_page.php" method="post" class="search-form">
