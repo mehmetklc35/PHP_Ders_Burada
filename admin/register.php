@@ -91,7 +91,7 @@
                                     <option value="software developer">software developer</option>                                    
                               </select>
                               <p>your email <span>*</span></p>
-                              <input type="email" name="email" placeholder="enter your email" maxlength="20"
+                              <input type="email" name="email" placeholder="enter your email" maxlength="30"
                               required class="box">
                         </div>
                         <div class="col">

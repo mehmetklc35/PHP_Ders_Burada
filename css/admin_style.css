@@ -33,15 +33,15 @@
       background: var(--main-color);
       color: #fff;
 }
-*::webkit-scroolbar{
+*::-webkit-scroolbar{
       height: .5rem;
-      white-space: .7rem;
+      width: .7rem;
       border-radius: 20px;
 }
-*::webkit-scroolbar-track{
+*::-webkit-scroolbar-track{
       background-color: transparent;
 }
-*webkit-scroolbar-thumb{
+*::-webkit-scroolbar-thumb{
       background-color: var(--color-primary);
 }
 html{
@@ -293,10 +293,9 @@ section{
 }
 .form-img  {
       position: absolute;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      position: relative;
+      left: 0;
+      width: 30%;
+      z-index: -3;
 }
 .form-container form{
       box-shadow: var(--box-shadow);
@@ -358,6 +357,170 @@ section{
       width: 100%;
       font-size: 2rem;
 }
+/*--------------dashboard------------*/
+.dashboard .box-container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1.5rem;  
+}
+.dashboard .box-container .box{
+      padding: 2rem;
+      border-radius: .5rem;
+      background-color: var(--white);
+      text-align: center;
+      box-shadow: var(--box-shadow);
+      line-height: 2;
+}
+.dashboard .box-container .box h3{     
+      font-size: 2.5rem;
+      color: var(--black);
+      margin-bottom: 1.5rem;
+}
+.dashboard .box-container .box p{
+      font-size: 2rem;
+      color: var(--light-color);
+      padding: .8rem 1.5rem;
+      border-radius: .5rem;
+      background-color: var(--light-bg);
+      margin: 1rem 0;
+      margin-bottom: 2rem;
+      text-transform: capitalize;
+}
+/*--------------footer------------*/
+.newsletter{
+      background-image: url('../image/dots.png');
+      background-repeat: no-repeat;
+      background-color: #2f57ef;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4% 0;
+      color: #fff;
+      text-align: center;
+      line-height: 1.5;
+}
+.newsletter span{
+      font-size: 1.5rem;
+      background-color: #fff;
+      text-transform: uppercase;
+      border-radius: 15px;
+      padding: .5rem 1rem;
+}
+.newsletter h1{
+      font-size: 4rem;
+      margin: .5rem;
+}
+.newsletter .input-field{
+      margin: 1rem 0;
+}
+.newsletter .input-field input{
+      padding: 1rem;
+      border-radius: 10px;
+      width: 30vw;
+}
+.newsletter .btn{
+      border-radius: 10px;
+      border: 1px solid #fff;
+      padding: .6rem 2rem;
+      font-size: 2rem;
+}
+.newsletter .box-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.newsletter .box-container .box{
+      background-color: #ffffff21;
+      margin: 1rem;
+      padding: 2rem;
+      border-radius: 10px;
+}
+.newsletter .box-counter{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+}
+.newsletter .box-counter .counter,
+.newsletter .box-counter i{
+      font-size: 3.5rem;
+}
+.newsletter .box-container h3{
+      font-size: 2.3rem;
+}
+.newsletter p{
+      font-size: 1.7rem;
+}
+footer{
+      background-image: url("image/category-9.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      padding: 8% 4%;
+      position: relative;
+}
+footer p{
+      font-size: 1.7rem;
+}
+footer .content  {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      justify-content: center;
+      line-height: 1.5;
+      color: #000;
+}
+footer .content .btn{
+      width: 300px;
+      font-size: 1.5rem;
+      color: #fff !important;
+}
+footer .content img{
+      width: 150px;
+}
+footer .content h3{
+      font-size: 2rem;
+      text-transform: capitalize;
+      color: var(--color-primary);
+}
+footer .content a{
+      display: block;
+      text-transform: capitalize;
+      font-size: 18px;
+      color: #000;
+}
+footer .content a:hover{
+      color: var(--color-voilet);
+}
+.icons{
+      margin-top: 1rem;
+}
+.icons i{
+      font-size: 2.5rem;
+      margin: 0 .5rem;
+      cursor: pointer;
+}
+.icons i:hover{
+      color: var(--color-secondary);
+}
+footer .bottom{
+      width: 90%;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 2px solid #fff;
+      padding: 2rem 0;
+}
+footer .bottom a{
+      font-size: 1.1rem;
+      color: #000;
+      text-transform: capitalize;
+}
+
 
 
 
