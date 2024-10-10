@@ -180,7 +180,7 @@ section{
 .header .flex .icons div:hover{
       background-image: var(--gradient);
 }
-.header .flex .profile{
+.header .flex .profile {
       padding: 2rem;
       text-align: center;
       width: 40rem;
@@ -388,6 +388,75 @@ section{
       margin-bottom: 2rem;
       text-transform: capitalize;
 }
+/*--------------tutor profile------------*/
+.tutor-profile .details{
+      box-shadow: var(--box-shadow);
+      background-color: #fff;
+      border-radius: .5rem;
+      padding: 4rem 2rem;
+      text-align: center;
+}
+.tutor-profile .details .tutor{
+      margin-bottom: 2rem;
+}
+.tutor-profile .details .tutor img{
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: .5rem;
+      padding: .5rem;
+      background-image: var(--gradient);
+}
+.tutor-profile .details .tutor span{
+      font-size: 1.8rem;
+      color: var(--light-color);
+      display: block;
+      margin-bottom: 2rem;
+      text-transform: capitalize;
+}
+.tutor-profile .details .flex{
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 4rem 0;
+}
+.tutor-profile .details .flex .box{
+      flex: 1 1 26rem;
+      border-radius: .5rem;
+      background-color: #cccccc33;
+}
+.tutor-profile .details .tutor h3{
+      font-size: 2.5rem;
+      margin: .5rem 0;
+      text-transform: capitalize;
+}
+.tutor-profile .details .flex span{
+      color: var(--main-color);
+      display: block;
+      margin-bottom: .5rem;
+      font-size: 2.5rem;
+      text-transform: capitalize;
+}
+.tutor-profile .details .flex .box p{
+      font-size: 2rem;
+      color: var(--black);
+      padding: .5rem 0;
+      margin-bottom: 1rem;
+      text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*--------------footer------------*/
 .newsletter{
       background-image: url('../image/dots.png');
@@ -455,7 +524,7 @@ section{
       font-size: 1.7rem;
 }
 footer{
-      background-image: url("image/category-9.png");
+      background-image: url("../image/category-9.png");
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;

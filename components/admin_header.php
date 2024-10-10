@@ -12,7 +12,7 @@
 
 ?>
 <header class="header">
-      <section class="flex">
+      <div class="flex">
             <a href="dashboard.php"> <img src="../image/logo.png" width="130px"> </a>
             <form action="search_page.php" method="post" class="search-form">
                   <input type="text" name="search" placeholder="search here.." required maxlength="100">
@@ -43,14 +43,14 @@
                         }else{
                   ?>
                   <h3>please login or register</h3>
-                  <div id="flex-btn">
+                  <div id="search-btn">
                         <a href="login.php" class="btn">login</a>
                         <a href="register.php" class="btn">register</a>
                        
                   </div>
                   <?php } ?>
             </div>
-      </section>
+      </div>
 </header>
 <div class="side-bar">
       <div class="profile">

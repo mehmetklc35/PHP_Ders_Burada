@@ -1,34 +1,54 @@
-let body = document.body;
-let profile = document.querySelector('header .flex .profile');
-
-document.querySelector('#user-btn').onclick = () =>{
-      profile.classList.toggle('active');
-      searchForm.classList.remove('active');
-}
-
-let searchForm = document.querySelector('.header .flex .search-form');
-
-document.querySelector('#search-btn').onclick = () =>{
-      searchForm.classList.toggle('active');
-      profile.classList.remove('active');
-}
-
-let sideBar = document.querySelector('.sider-bar');
-
-document.querySelector('#menu-btn').onclick = () =>{
-      sideBar.classList.toggle('active');
-      body.classList.toggle('active');
-}
-
-window.onscroll = () =>{
-      profile.classList.remove('active');
-      searchForm.classList.remove('active');
-
-      if (window.innerWidth < 1200) {
-            sideBar.classList.remove('active');
-            body.classList.remove('active');
-      }
-}
+document.addEventListener("DOMContentLoaded", () => {
+      let body = document.body;
+      let profile = document.querySelector('.profile');
+      let searchForm = document.querySelector('.header .flex .search-form');
+      let sideBar = document.querySelector('.side-bar');
+  
+      document.querySelector('#user-btn').onclick = () => {
+          if (profile) {
+              profile.classList.toggle('active');
+              if (searchForm) {
+                  searchForm.classList.remove('active');
+              }
+          }
+      };
+  
+      document.querySelector('#search-btn').onclick = () => {
+          if (searchForm) {
+              searchForm.classList.toggle('active');
+              if (profile) {
+                  profile.classList.remove('active');
+              }
+          }
+      };
+  
+      document.querySelector('#menu-btn').onclick = () => {
+          if (sideBar) {
+              sideBar.classList.toggle('active');
+          }
+          body.classList.toggle('active');
+      };
+  
+      window.onscroll = () => {
+            if (profile) {
+                profile.classList.remove('active');
+            }
+        
+            if (searchForm) {
+                searchForm.classList.remove('active');
+            }
+        
+            if (window.innerWidth < 1200) {
+                if (sideBar) {
+                    sideBar.classList.remove('active');
+                } else {
+                    console.error('Sidebar element not found');
+                }
+            }
+      };
+        
+  });
+  
 /*----------------counter--------------*/
 (() => {
       const counter = document.querySelectorAll('.counter');
