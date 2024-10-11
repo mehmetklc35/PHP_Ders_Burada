@@ -8,6 +8,27 @@
             header('location: login.php');
       }
 
+      if (isset($_POST['submit'])) {
+            $id = unique_id();
+            $title = $_POST['title'];
+            $description = $_POST['description'];
+            $status = $_POST['status'];
+
+            $image = $_FILES['image']['name'];
+            $ext = $pathinfo($image, PATHINFO_EXTENSION);
+            $rename = unique_id().'.'.$ext;
+            $image_size = $_FILES['image']['size'];
+            $image_tmp_name = '../uploaded_files/'.$rename;
+
+            $add_playlist = $conn->prepare("INSERT INTO `playlist`(id, tutor_id, title, description,
+                  thumb, status) VALUES(?,?,?,?,?,?)");
+            $add_playlist->execute([$id, $tutor_id, $title, $description, $rename, $status]);
+            move_uploaded_file($image_tmp_name, $image_folder);
+
+            $message[] = 'new playlist created';
+            
+      }
+
       
 ?>
 <style type="text/css">
