@@ -541,6 +541,7 @@ section{
       border-radius: .5rem;
       padding: 2rem;
       overflow-x: hidden;
+      box-shadow: var(--box-shadow);
 }
 .playlists .box-container .box .thumb{
       height: 20rem;
@@ -582,6 +583,7 @@ section{
       font-size: 2rem;
       color: var(--black);
       margin-bottom: 1rem;
+      text-transform: capitalize;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow-x: hidden;
@@ -590,6 +592,7 @@ section{
       line-height: 2;
       font-size: 1.7rem;
       color: var(--light-color);
+      margin-bottom: 1rem;
 }
 .playlists .box-container .box .description::after{
       content: '...';

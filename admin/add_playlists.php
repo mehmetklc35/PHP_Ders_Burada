@@ -7,27 +7,30 @@
             $tutor_id = '';
             header('location: login.php');
       }
-
       if (isset($_POST['submit'])) {
             $id = unique_id();
             $title = $_POST['title'];
             $description = $_POST['description'];
             $status = $_POST['status'];
-
+        
             $image = $_FILES['image']['name'];
-            $ext = $pathinfo($image, PATHINFO_EXTENSION);
-            $rename = unique_id().'.'.$ext;
+            // Burayı düzeltiyoruz: $pathinfo fonksiyonunu doğrudan çağırıyoruz
+            $ext = pathinfo($image, PATHINFO_EXTENSION); 
+            $rename = unique_id() . '.' . $ext;
             $image_size = $_FILES['image']['size'];
-            $image_tmp_name = '../uploaded_files/'.$rename;
-
+            $image_tmp_name = $_FILES['image']['tmp_name']; // Geçici dosya adını al
+            $image_folder = '../uploaded_files/' . $rename; // Hedef dosya yolu
+        
             $add_playlist = $conn->prepare("INSERT INTO `playlist`(id, tutor_id, title, description,
                   thumb, status) VALUES(?,?,?,?,?,?)");
             $add_playlist->execute([$id, $tutor_id, $title, $description, $rename, $status]);
+        
+            // Dosyayı taşıma işlemini düzelt
             move_uploaded_file($image_tmp_name, $image_folder);
-
+        
             $message[] = 'new playlist created';
-            
-      }
+        }
+        
 
       
 ?>
@@ -57,7 +60,7 @@
                         <option value="deactive">deactive</option>
                   </select>
                   <p>playlist title <span>*</span></p>
-                  <input type="text" name="title" maxlength="100" required placeholder="Enter playlist
+                  <input type="text" name="title" maxlength="150" required placeholder="Enter playlist
                   title" class="box">
                   <p>playlist description <span>*</span></p>
                   <textarea name="description" class="box" placeholder="write description" maxlength="1000"
