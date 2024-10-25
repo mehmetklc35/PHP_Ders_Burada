@@ -84,7 +84,7 @@ section{
       display: flex;
       align-items: center;
       gap: 1rem;
-      justify-content: center;
+      justify-content: space-between;
 }
 .message.form{
       max-width: 1200px;
@@ -132,18 +132,17 @@ section{
       left: 0%;
       right: 0%;
       z-index: 1000;
-      box-shadow: 0px 5px 10px 0px #aaa;
-      min-height: 30px !important; 
+      box-shadow: 0px 5px 10px 0px #aaa;      
 }
 .header .flex{
       padding: 1.5rem 2rem;
-      position: sticky;
+      position: revert;
       display: flex;
       align-items: center;
       justify-content: space-between;      
 }
 .header .flex .search-form{
-      width: 70rem;
+      width: 60rem;
       border-radius: .5rem;
       display: flex;
       align-items: center;
@@ -158,7 +157,7 @@ section{
       color: var(--color-primary);
 }
 .header .flex .search-form button{
-      font-size: 3rem;
+      font-size: 2rem;
       color: var(--color-primary);
       cursor: pointer;
       background: none;
@@ -167,7 +166,7 @@ section{
       color: var(--color-secondary);
 }
 .header .flex .icons div{
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: var(--white);
       border-radius: .5rem;
       height: 4.5rem;
@@ -182,7 +181,15 @@ section{
 .header .flex .icons div:hover{
       background-image: var(--gradient);
 }
+#search-btn{
+      display: none;
+}
 .header .flex .profile {
+      position: absolute;
+      top: 120%;
+      right: 2rem;
+      background-color: var(--white);
+      border-radius: .5rem;
       padding: 2rem;
       text-align: center;
       width: 40rem;
@@ -190,7 +197,14 @@ section{
       transform-origin: top right;
       box-shadow: var(--box-shadow);
 }
-.header .flex .profile.active{
+.header .flex .profile span{
+      display: block;
+      color: var(--light-color);
+      padding: 1rem;
+      margin: .5rem;
+      font-size: 1.6rem;
+}
+.header .flex .profile.active {      
       transform: scale(1.0);
       transition: .2s linear;
 }
@@ -236,6 +250,7 @@ section{
 }
 .side-bar .profile{
       padding: 3rem 2rem;
+      text-align: center;
 }
 .side-bar .profile img{
       height: 10rem;
@@ -251,6 +266,13 @@ section{
       color: var(--black);
       text-transform: capitalize;
       margin-bottom: 2rem;
+}
+.side-bar .profile span{
+      display: block;
+      color: var(--light-color);
+      padding: 1rem;
+      margin: .5rem;
+      font-size: 2rem;
 }
 .side-bar .profile p{
       color: var(--light-color);
@@ -622,7 +644,7 @@ section{
 }
 .newsletter span{
       font-size: 1.5rem;
-      background-color: #fff;
+      background-color: #ffffff33;
       text-transform: uppercase;
       border-radius: 15px;
       padding: .5rem 1rem;
@@ -739,9 +761,112 @@ footer .bottom a{
       text-transform: capitalize;
 }
 
-
-
-
+/*--------------view playlist------------*/
+.view-playlist .row{
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--white);
+      border-radius: .5rem;
+      padding: 4rem 2rem;
+      margin: 3rem 0;
+}
+.view-playlist .row .thumb{
+      flex: 1 1 40rem;
+      height: 30rem;
+      position: relative;
+}
+.view-playlist .row .thumb img{
+      height: 100%;
+      width: 100%;
+      border-radius: .5rem;
+      object-fit: cover;
+}
+.view-playlist .row .thumb span{
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      border-radius: .5rem;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      padding: .5rem 1.5rem;
+      font-size: 2rem;
+}
+.view-playlist .row .details{
+      flex: 1 1 40rem;
+}
+.view-playlist .row .details .date{
+      font-size: 1.5rem;
+      margin: 1rem 0;
+}
+.view-playlist .row .details .date i{
+      color: var(--color-primary);
+      margin-right: 1rem;
+}
+.view-playlist .row .details .date span{
+      color: var(--light-color);
+}
+.view-playlist .row .details .title{
+      font-size: 2rem;
+      color: var(--black);
+      padding-bottom: .5rem;
+      text-transform: capitalize;
+}
+.view-playlist .row .details .description{
+      padding: .5rem 0;
+      font-size: 1.7rem;
+      color: var(--light-color);
+      line-height: 2;
+      white-space: pre-line;
+}
+.video-form form{
+      max-width: 50vw;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: var(--box-shadow);
+      border-radius: .5rem;
+      padding: 2rem;
+      padding-top: 1rem;
+}
+.video-form form p{
+      padding-top: 1rem;
+      font-size: 1.7rem;
+      color: var(--light-color);
+}
+.video-form form p span{
+      color: red;
+}
+.video-form form .box{
+      width: 100%;
+      border-radius: .5rem;
+      box-shadow: var(--box-shadow);
+      padding: 1.4rem;
+      font-size: 1.8rem;
+      color: var(--black);
+      margin: 1rem 0;
+}
+.video-form form textarea{
+      height: 20rem;
+      resize: none;
+}
+.video-form form .btn{
+      width: 100%;
+}
+.video-form form img{
+      width: 100%;
+      height: 20rem;
+      border-radius: .5rem;
+      margin: .5rem 0;
+}
+.video-form form video{
+      background-color: #000;
+      width: 100%;
+      height: 20rem;
+      border-radius: .5rem;
+      margin: .5rem 0;
+}
 
 
 
